@@ -1,7 +1,6 @@
-import './Nav.css'
+import './CSS/Nav.css'
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Index from "./page/index";
-import Conclusion from "./page/conclusion";
+import Conclusion from "./conclusion/main_conclusion";
 
 function Navigation() {
     return (
@@ -9,7 +8,7 @@ function Navigation() {
             <img id='Nav_logo' alt='website Logo' src={require('./picture/bjyx.jpg')} />
             <Router>
                 <ul id='nav_items'>
-                    <li><Link to="/index">首页</Link></li>
+                    <li><Link to="/">首页</Link></li>
                     <li><Link to="/conclusion">知识总结</Link></li>
                     <li><Link to="/resume">简历生成</Link></li>
                     <li><Link to="/download">程序下载</Link></li>
@@ -18,7 +17,6 @@ function Navigation() {
 
                 {/* 使用 Switch 和 Route 来配置路径和组件 */}
                 <Routes>
-                    <Route path="/index" element={<Index />} />
                     <Route path="/conclusion" element={<Conclusion />} />
                 </Routes>
             </Router>
