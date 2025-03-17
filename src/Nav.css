@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Nav_frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* 左右分布 */
+    height: 4.6875rem;
+    padding: 0 1.5625rem;
+    background-color: #82c5ff;  /* 设置背景颜色 */
+}
+
+#Nav_logo {
+    height: 3.75rem;  /* 设置logo宽度 */
+    object-fit: contain;  /* 保持比例 */
+}
+
+#nav_items {
+    display: flex;
+    justify-content: space-evenly;  /* 在导航项之间平均分配空间 */
+    flex-grow: 1;  /* 让导航栏占据剩余空间 */
+    list-style: none;
+}
+
+#nav_items li {
+    padding: 0 15px;
+    text-align: center;
+}
+
+#Nav_register {
+    text-align: right;
+    margin-left: 20px;
+}
+
+#Nav_register p {
+    margin: 0;
+}
