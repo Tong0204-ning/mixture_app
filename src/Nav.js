@@ -1,30 +1,25 @@
 import './CSS/Nav.css'
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Conclusion from "./conclusion/main_conclusion";
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
         <nav id='Nav_frame'>
             <img id='Nav_logo' alt='website Logo' src={require('./picture/bjyx.jpg')} />
-            <Router>
-                <ul id='nav_items'>
-                    <li><Link to="/">首页</Link></li>
-                    <li><Link to="/conclusion">知识总结</Link></li>
-                    <li><Link to="/resume">简历生成</Link></li>
-                    <li><Link to="/download">程序下载</Link></li>
-                    <li><Link to="/chat">闲聊</Link></li>
-                </ul>
 
-                {/* 使用 Switch 和 Route 来配置路径和组件 */}
-                <Routes>
-                    <Route path="/conclusion" element={<Conclusion />} />
-                </Routes>
-            </Router>
+            <ul id='nav_items'>
+                <li><Link to="/">首页</Link></li>
+                <li><Link to="/conclusion">知识总结</Link></li>
+                <li><Link to="/resume_produce">简历生成</Link></li>
+                <li><Link to="/download_app">程序下载</Link></li>
+                <li><Link to="/chat_something">闲聊</Link></li>
+            </ul>
+
             <div id='Nav_register'>
-                <p>登陆</p>
+                <span>登陆</span>
+                <span> / </span>
+                <span>注册</span>
             </div>
         </nav>
     )
 }
-
 export default Navigation
