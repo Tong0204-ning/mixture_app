@@ -2,17 +2,19 @@ import './CSS/App.css';
 import Navigation from "./Nav"
 import Main from "./Main"
 import Footer from "./Footer"
-import { BrowserRouter as Router } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 function App() {
+
+  const register_location = useLocation();
+
   return (
-    <Router>
-      <div className='containerSetting'>
-        <Navigation className='navigationItems' />
-        <Main className='mainContent' />
-        <Footer className='Footeritems' />
-      </div>
-    </Router>
+    <div className='containerSetting'>
+      {register_location.pathname !== '/register' && <Navigation className='navigationItems' />}
+      <Main className='mainContent' />
+      {register_location.pathname !== '/register' && <Footer className='Footeritems' />}
+    </div>
   );
 }
 

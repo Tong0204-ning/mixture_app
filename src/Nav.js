@@ -1,10 +1,14 @@
 import './CSS/Nav.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Navigation() {
+
+    const register_navigate = useNavigate();
+
     return (
         <nav id='Nav_frame'>
-            <img id='Nav_logo' alt='website Logo' src={require('./picture/bjyx.jpg')} />
+            <img id='Nav_logo' alt='website Logo' src={require('./Picture/bjyx.jpg')} />
 
             <ul id='nav_items'>
                 <li><Link to="/">首页</Link></li>
@@ -17,7 +21,7 @@ function Navigation() {
             <div id='Nav_register'>
                 <span>登陆</span>
                 <span> / </span>
-                <span>注册</span>
+                <button onClick={() => register_navigate("/register")}>注册</button>
             </div>
         </nav>
     )
