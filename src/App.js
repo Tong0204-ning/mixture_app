@@ -5,6 +5,7 @@ import Footer from "./Footer"
 import { useLocation } from 'react-router-dom';
 
 
+// 整合页面的三个部分（导航栏 + 主体内容 + Footer）
 function App() {
 
   const register_location = useLocation();

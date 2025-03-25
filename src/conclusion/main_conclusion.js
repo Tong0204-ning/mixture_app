@@ -1,12 +1,10 @@
+import "../CSS/conclusion.css"
+
 function Conclusion() {
     return (
-        <>
-            <ul>
-                <li>计算机相关</li>
-                <li>化学相关</li>
-                <li>其他</li>
-            </ul>
-        </>
+        <main className="conclusionMain">
+            <a href="https://blissx-ml.github.io/Daily_Snapshot.github.io/">跳转至我的 Jekyll 网站</a>
+        </main>
     )
 }
 export default Conclusion

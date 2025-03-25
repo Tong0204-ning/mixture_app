@@ -1,20 +1,8 @@
+/* 只能设置 <div> 的 CSS 样式，导入的 Footer 等组件无法在此处修改 CSS 样式 */
+
 .containerSetting {
   display:grid;
-  grid-template-rows: 4.6875rem auto 15.9375rem;
+  grid-template-rows: 4rem auto 8rem;
   position: relative;
-}
-
-.navigationItems {
-  position: sticky;
-  top: 0;
-  z-index: 10; /* 确保导航栏在顶部 */
-}
-
-.mainContent {
-  background-color: brown;
-}
-
-.Footeritems {
-  background-color: coral;
-  text-align: center;
+  height: 100vh; /* 占满整个视口高度 */
 }

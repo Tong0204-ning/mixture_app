@@ -1,4 +1,4 @@
-import './CSS/main.css'
+import './CSS/Main.css'
 import { Route, Routes } from 'react-router-dom';
 import Homepage from './Home';
 import Conclusion from './Conclusion/main_conclusion';
@@ -7,6 +7,8 @@ import Download from './Download/main_download';
 import Chat from './Chat/main_chat';
 import Register from './Register/main_register'
 
+// 定义界面中内容的部分
+// 实现 SPA
 function Main() {
 
     return (

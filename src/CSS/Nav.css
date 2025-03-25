@@ -1,39 +1,81 @@
 * {
     margin: 0;
-    padding: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 
 #Nav_frame {
     display: flex;
+    justify-content: space-between; /* 左右分布 */
     align-items: center;
-    justify-content: space-between;  /* 左右分布 */
-    height: 4.6875rem;
+    height: 4rem;
     padding: 0 1.5625rem;
-    background-color: #82c5ff;  /* 设置背景颜色 */
+    color:white;
+    background-color: #3D5E3D;  /* 设置背景颜色 */
+    position: sticky;
+    top: 0;
+    z-index: 10; /* 确保导航栏在顶部 */
 }
 
 #Nav_logo {
     height: 3.75rem;  /* 设置logo宽度 */
     object-fit: contain;  /* 保持比例 */
+    margin-right: 45px;
 }
 
 #nav_items {
     display: flex;
     justify-content: space-evenly;  /* 在导航项之间平均分配空间 */
+    align-items: center;
     flex-grow: 1;  /* 让导航栏占据剩余空间 */
     list-style: none;
 }
 
 #nav_items li {
-    padding: 0 15px;
-    text-align: center;
+    padding: 0;
+    margin: 0;
 }
+
+#nav_items li a {
+    display: block;
+    padding: 5px 15px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+#nav_items li a:hover {
+    font-weight:600;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+#nav_items li .active-link {
+    background-color: #ffffff;
+    color:#3d5e3d;
+    border-radius:5px;
+    font-weight: bold;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+
 
 #Nav_register {
     text-align: right;
-    margin-left: 20px;
+    margin-left: 45px;
 }
 
 #Nav_register p {
     margin: 0;
 }
+
+
+
+
